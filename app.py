@@ -1,7 +1,7 @@
 import streamlit as st
 import joblib
 import numpy as np
-model = joblib.load(r'C:\Users\FUTURE TECH HYD\Desktop\Python Day 1\diabetes_model.pk1')
+model = joblib.load('diabetes_model.pk1')
 st.title("🩺 Smart Diabetes Checker AI")
 st.write("Apni medical reports ke mutabiq niche diye gaye khano ko bharen:")
 col1, col2 = st.columns(2)
@@ -21,4 +21,5 @@ with col2:
         if prediction[0] == 1:
             st.error("⚠️ Result: Positive - Diabetes ka khatra ho sakta hai.")
         else:
+
             st.success("✅ Result: Negative - Aap filhal bilkul theek hain!")
