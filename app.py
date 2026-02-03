@@ -17,7 +17,7 @@ with col2:
     pedigree = st.number_input("Pedigree Function", min_value=0.0, max_value=3.0, value=0.5)
     if st.button("Check My Result"):
         features = np.array([[preg, glucose, bp, skin, ins, bmi, pedigree, age]])
-        prediction = model.predict(features)
+             prediction = model.predict(features)
     if prediction[0] == 1:
             st.error("⚠️ Result: Positive - Diabetes ka khatra ho sakta hai.")
             st.info("💡 **Mashwara:**\n* Foran doctor se ruju karein.\n* Rozana 30 minute paidal chalein.\n* Meethi cheezon se parhez karein.")
