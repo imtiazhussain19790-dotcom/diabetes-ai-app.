@@ -16,12 +16,12 @@ with col2:
     skin = st.number_input("Skin Thickness", min_value=0, max_value=100, value=20)
     pedigree = st.number_input("Pedigree Function", min_value=0.0, max_value=3.0, value=0.5)
 if st.button("Check My Result"):
-        features = np.array([[preg, glucose, bp, skin, ins, bmi, pedigree, age]])
-     prediction = model.predict(features)
-if prediction[0] == 1:
+    features = np.array([[preg, glucose, bp, skin, ins, bmi, pedigree, age]])
+    prediction = model.predict(features)
+    if prediction[0] == 1:
             st.error("⚠️ Result: Positive - Diabetes ka khatra ho sakta hai.")
             st.info("💡 **Mashwara:**\n* Foran doctor se ruju karein.\n* Rozana 30 minute paidal chalein.\n* Meethi cheezon se parhez karein.")
-else:
+    else:
             st.success("✅ Result: Negative - Aap filhal bilkul theek hain!")
             st.balloons()
             st.info("💡 **Sehatmand Rehne ke Tips:**\n* Healthy diet barkrar rakhein.\n* Rozana exercise karein.\n* Pani ka zyada istemal karein.")
