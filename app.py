@@ -6,7 +6,7 @@ st.title("🩺 Smart Diabetes Checker AI")
 st.write("Apni medical reports ke mutabiq niche diye gaye khano ko bharen:")
 col1, col2 = st.columns(2)
 with col1:
-    glucose = st.number_input("Glucose Level", min_value=0, max_value=300, value=120)
+    glucose = st.sidebar.number_input("Glucose Level", min_value=0, max_value=300, value=120)
     bmi = st.number_input("BMI (Weight/Height)", min_value=0.0, max_value=70.0, value=25.0)
     age = st.number_input("Age", min_value=0, max_value=120, value=30)
     bp = st.number_input("Blood Pressure", min_value=0, max_value=200, value=70)
