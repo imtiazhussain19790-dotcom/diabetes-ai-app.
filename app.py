@@ -18,7 +18,7 @@ with col2:
     if st.button("Check My Result"):
         features = np.array([[preg, glucose, bp, skin, ins, bmi, pedigree, age]])
         prediction = model.predict(features)
-       if prediction[0] == 1:
+      if prediction[0] == 1:
             st.error("⚠️ Result: Positive - Diabetes ka khatra ho sakta hai.")
             st.info("💡 **Mashwara:**\n* Foran doctor se ruju karein.\n* Rozana 30 minute paidal chalein.\n* Meethi cheezon se parhez karein.")
       else:
